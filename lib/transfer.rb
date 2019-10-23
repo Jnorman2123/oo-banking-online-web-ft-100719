@@ -18,6 +18,7 @@ class Transfer
       @receiver.balance += @amount
       @status = "complete"
     elsif @sender.balance < self.amount
+      @status = "rejected"
       p "Transaction rejected. Please check your account balance."
     end
   end
