@@ -9,7 +9,6 @@ class Transfer
   end
 
   def valid?
-    @sender.bank_account.valid?
-    @receiver.bank_account.valid?
+    @sender.valid? && @receiver.valid?
   end
 end
